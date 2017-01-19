@@ -1,0 +1,38 @@
+{
+  "name": "larrotta69-portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node tools/server.js",
+    "lint": "node_modules/.bin/esw  webpack.config.*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larrotta69/larrotta69.github.io.git"
+  },
+  "author": "larrotta69",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larrotta69/larrotta69.github.io/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-core": "6.8.0",
+    "babel-loader": "6.2.4",
+    "babel-plugin-react-display-name": "2.0.0",
+    "babel-preset-es2015": "6.6.0",
+    "babel-preset-react": "6.5.0",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-register": "6.8.0",
+    "eslint": "2.9.0",
+    "eslint-plugin-import": "1.6.1",
+    "eslint-plugin-react": "5.0.1",
+    "eslint-watch": "2.1.11",
+    "express": "^4.14.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "homepage": "https://github.com/larrotta69/larrotta69.github.io#readme"
+}
