@@ -1,12 +1,28 @@
 import express from 'express'
 import path from 'path'
+import webpack from 'webpack'
+import config from '../webpack.config.dev'
+import open from 'open'
 
 const app = express()
-app.set('port', 3000)
+const compiler = webpack(config)
+const port = 3000
 
-app.use(express.static(path.join(__dirname, '../build')))
+app.use(require('webpack-dev-middleware')(compiler, {
+	noInfo: true,
+	publicPath: config.output.publicPath
+}))
 
-const server = app.listen(app.get('port'), () => {
-  const port = server.address().port
-  console.log('Magic happens on port ' + port)
+app.use(require('webpack-hot-middleware')(compiler))
+
+app.get('*', function(req, res) {
+	res.sendFile(path.join( __dirname, '../build/index.html'))
+})
+
+app.listen(port, function(err) {
+	if (err) {
+		console.log(err)
+	} else {
+		open(`http://localhost:${port}`)
+	}
 })
