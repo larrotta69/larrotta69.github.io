@@ -13,7 +13,7 @@ const routes = (
 		<IndexRoute component={HomePage}/>
 	</Route>
 )
-console.log('daniel')
+console.log('cata')
 render(
 	<Router history={browserHistory} routes={routes}/>,
 	document.getElementById('main')
