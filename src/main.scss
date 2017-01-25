@@ -1,5 +1,8 @@
+$dan-turquoise: #00ff87;
+$dan-purple: #38003c;
+
 @import "./components/common/_header";
 
 body {
-    background: turquoise;
+    background: $dan-turquoise;
 }
